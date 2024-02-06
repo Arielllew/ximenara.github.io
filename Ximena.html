@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una historia sobre Ximena</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Una historia sobre Ximena</h1>
+        <p>Bienvenido a mi historia...</p>
+        <div id="questions">
+            <h2>Nivel 1: La Primera Impresión</h2>
+            <p>Pregunta: ¿Dónde conocí a Ximena por primera vez?</p>
+            <button onclick="checkAnswer('A')">En la biblioteca</button>
+            <button onclick="checkAnswer('B')">En el parque</button>
+            <button onclick="checkAnswer('C')">En la clase de inglés</button>
+        </div>
+        <script>
+            function checkAnswer(answer) {
+                if (answer === 'C') {
+                    document.getElementById('questions').innerHTML = `
+                        <h2>Nivel 2: El Encanto de Ximena</h2>
+                        <p>Pregunta: ¿Qué fue lo que más me llamó la atención de Ximena?</p>
+                        <button onclick="checkAnswer2('A')">Su hermosa carita y cuerpo</button>
+                        <button onclick="checkAnswer2('B')">Su sentido del humor</button>
+                        <button onclick="checkAnswer2('C')">Las dos anteriores</button>
+                    `;
+                } else {
+                    alert('Respuesta incorrecta. ¡Inténtalo de nuevo!');
+                }
+            }
+            function checkAnswer2(answer) {
+                if (answer === 'C') {
+                    document.getElementById('questions').innerHTML = `
+                        <h2>Nivel 3: El Conflicto Interno</h2>
+                        <p>Pregunta: ¿Qué sentimiento experimenté hacia Ximena?</p>
+                        <button onclick="checkAnswer3('A')">Amor</button>
+                        <button onclick="checkAnswer3('B')">Confusión</button>
+                        <button onclick="checkAnswer3('C')">Enfado</button>
+                    `;
+                } else {
+                    alert('Respuesta incorrecta. ¡Inténtalo de nuevo!');
+                }
+            }
+            function checkAnswer3(answer) {
+                if (answer === 'A') {
+                    document.getElementById('questions').innerHTML = `
+                        <h2>Nivel 4: La Revelación</h2>
+                        <p>Pregunta: ¿Qué le confesé a Ximena al final de nuestra historia?</p>
+                        <button onclick="checkAnswer4('A')">Que fue un error enamorarme de ella</button>
+                        <button onclick="checkAnswer4('B')">Que la voy a olvidar</button>
+                        <button onclick="checkAnswer4('C')">Que siempre la voy a querer y amar</button>
+                    `;
+                } else {
+                    alert('Respuesta incorrecta. ¡Inténtalo de nuevo!');
+                }
+            }
+            function checkAnswer4(answer) {
+                if (answer === 'C') {
+                    document.getElementById('questions').innerHTML = `
+                        <h2>Fin de la historia :)</h2>
+                        <p>Gracias por acompañarme en este viaje a través de mi historia con Ximena. Aunque a veces el amor puede ser complicado, siempre recordaré con cariño los momentos que compartimos pq realmente la quiero mucho y siempre te voy a tener en mi corazón Ximena <3.</p>
+                    `;
+                } else {
+                    alert('Respuesta incorrecta. ¡Inténtalo de nuevo!');
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
+
